@@ -74,7 +74,7 @@ mtx,dist = getCoefficients(objpoints, imgpoints, originalImage)
 ### Pipeline (single images)
 #### 1. Provide an example of a distortion-corrected image.
 To demonstrate this step, I will describe how I apply the distortion correction to one of the test images like this one:
-![Camera calibration](./results_images/camera_calibration_undistort_result.png)
+![Camera calibration](./results_images/camera_calibration_undistort_result.PNG)
 
 
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
