@@ -46,9 +46,9 @@ I then used the output `objpoints` and `imgpoints` to compute the camera calibra
 
 The camera calibration code could be found on the [Step_1_Camera_Calibration notebook](Step_1_Camera_Calibration.ipynb). Using `cv2.findChessboardCorners`, the corners points are stored in an array `imgpoints` for each calibration image where the chessboard could be found. The object points will always be the same as the known coordinates of the chessboard with zero as 'z' coordinate because the chessboard is flat. The object points are stored in an array called `objpoints`. I then used the output objpoints and imgpoints to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera` function. I applied this distortion correction to the test image using the `cv2.undistort` function and obtained this result:
 
-![Camera calibratio undistort result](results_images/camera_calibration_undistort_result.png)
+![Camera calibratio undistort result](./results_images/camera_calibration_undistort_result.png)
 
-The camera calibration and distortion coefficients(mtx, dist) are stored using `pickle`(in folder ./pickled_data/camera_calibration.p) to be used on the main [notebook](Project. Advance%20Lane%20Lines.ipynb)
+The camera calibration and distortion coefficients(mtx, dist) are stored using `pickle`(in folder ./pickled_data/camera_calibration.p) to be used on the main [notebook](Project.%20Advance%20Lane%20Lines.ipynb)
 
 ### Pipeline (single images)
 #### 1. Provide an example of a distortion-corrected image.
