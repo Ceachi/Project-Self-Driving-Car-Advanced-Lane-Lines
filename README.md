@@ -158,6 +158,9 @@ The generated points where mapped back to the image space using the inverse tran
 #### 1. Provide a link to your final video output. Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 The project video was processed and the results at [video_output](./video_output/project_video.mp4)
 
+#### Youtube video
+[![Youtube video](https://img.youtube.com/vi/SOz1fBzZn1A/0.jpg)](https://www.youtube.com/watch?v=SOz1fBzZn1A)
+
 ### Discussion
 
 #### 1. Briefly, discuss any problems/issues you faced in your implementation of this project. Where will your pipeline likely fail? What could you do to make it more robust?
@@ -178,12 +181,4 @@ https://arxiv.org/abs/1605.06211
 http://www.cvlibs.net/datasets/kitti/eval_road.php
 
 
-
-
-
-
-
-
-## How to write a README
-A well written README file can enhance your project and portfolio.  Develop your abilities to create professional README files by completing [this free course](https://www.udacity.com/course/writing-readmes--ud777).
 
