@@ -36,22 +36,46 @@ The goals / steps of this project are the following:
 
 ### Camera Calibration
 
-#### 1. Briefly state how you computed the camera matrix and distortion coefficients. Provide an example of a distortion corrected calibration image
+#### 1. This is a briefly state of how I computed the camera matrix and distortion coefficients. Provide an example of a distortion corrected calibration image
 
-The code for this step is contained in the first code cell of the IPython notebook located in "./examples/example.ipynb" (or in lines # through # of the file called `some_file.py`).  
+The camera calibration code for this step could be found on the [Step_1_Camera_Calibration notebook](Step_1_Camera_Calibration.ipynb).
 
 I start by preparing "object points", which will be the (x, y, z) coordinates of the chessboard corners in the world. Here I am assuming the chessboard is fixed on the (x, y) plane at z=0, such that the object points are the same for each calibration image.  Thus, `objp` is just a replicated array of coordinates, and `objpoints` will be appended with a copy of it every time I successfully detect all chessboard corners in a test image.  `imgpoints` will be appended with the (x, y) pixel position of each of the corners in the image plane with each successful chessboard detection.  
 
 I then used the output `objpoints` and `imgpoints` to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function.  I applied this distortion correction to the test image using the `cv2.undistort()` function.
 
-The camera calibration code could be found on the [Step_1_Camera_Calibration notebook](Step_1_Camera_Calibration.ipynb). Using `cv2.findChessboardCorners`, the corners points are stored in an array `imgpoints` for each calibration image where the chessboard could be found. The object points will always be the same as the known coordinates of the chessboard with zero as 'z' coordinate because the chessboard is flat. The object points are stored in an array called `objpoints`. I then used the output objpoints and imgpoints to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera` function. I applied this distortion correction to the test image using the `cv2.undistort` function and obtained this result:
+Using `cv2.findChessboardCorners`, the corners points are stored in an array `imgpoints` for each calibration image where the chessboard could be found. The object points will always be the same as the known coordinates of the chessboard with zero as 'z' coordinate because the chessboard is flat. The object points are stored in an array called `objpoints`. 
 
-![Camera calibratio undistort result](./results_images/camera_calibration_undistort_result.png)
+I then used the output objpoints and imgpoints to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera` function. I applied this distortion correction to the test image using the `cv2.undistort` function and obtained this result:
+
+![Camera calibratio undistort result](./results_images/camera_calibration_undistort_result.PNG)
 
 The camera calibration and distortion coefficients(mtx, dist) are stored using `pickle`(in folder ./pickled_data/camera_calibration.p) to be used on the main [notebook](Project.%20Advance%20Lane%20Lines.ipynb)
 
+A short description of the images in [Step_1_Camera_Calibration notebook](Step_1_Camera_Calibration.ipynb) to compute the camera calibration matrix and distortion coefficients given a set of chessboard images:
+```
+readChessImages(): Load calibration images(chess boards in different angles from our camera_cal folder)
+showImages(calibrationImages): Method for displaying the images
+findingPoints(calibrationImages): Method for detecting the points in chess images (objpoints and imgpoints)
+getCoefficients(objpoints, imgpoints, originalImage): Method for returning camera matrix, mtx, and the distortion coefficients dist
+
+HOW TO USE THESE FUNCTIONS: 
+
+# Read images
+calibrationImages = readChessImages()
+# Return object points and image points
+objpoints, imgpoints, originalImages, outimages = findingPoints(calibrationImages)
+# Save coefficients into pickle
+originalImage = originalImages[10]
+
+#Getting the coefficients we need for camera calibration
+mtx,dist = getCoefficients(objpoints, imgpoints, originalImage)
+```
 ### Pipeline (single images)
 #### 1. Provide an example of a distortion-corrected image.
+To demonstrate this step, I will describe how I apply the distortion correction to one of the test images like this one:
+![alt text][image2]
+
 
 
 
