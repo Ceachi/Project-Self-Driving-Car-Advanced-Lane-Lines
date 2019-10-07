@@ -74,7 +74,7 @@ mtx,dist = getCoefficients(objpoints, imgpoints, originalImage)
 ### Pipeline (single images)
 #### 1. Provide an example of a distortion-corrected image.
 To demonstrate this step, I will describe how I apply the distortion correction to one of the test images like this one:
-![Camera calibration](./results_images/original-to-undistort.png)
+![Camera calibration](./results_images/camera_calibration_undistort_result.png)
 
 
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
@@ -168,6 +168,17 @@ Problems:
 Few improvements: 
 - we can use other gradients, for example Laplacian to improve the line detection;
 - frame to frame to improve robustness of the process
+
+Articles to research for improvements:
+https://arxiv.org/abs/1706.08442
+https://towardsdatascience.com/lane-detection-with-deep-learning-part-1-9e096f3320b7
+https://towardsdatascience.com/lane-detection-with-deep-learning-part-2-3ba559b5c5af
+https://arxiv.org/abs/1710.06288
+https://arxiv.org/abs/1605.06211
+http://www.cvlibs.net/datasets/kitti/eval_road.php
+
+
+
 
 
 
