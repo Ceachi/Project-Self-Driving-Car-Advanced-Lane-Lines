@@ -48,7 +48,7 @@ Using `cv2.findChessboardCorners`, the corners points are stored in an array `im
 
 I then used the output objpoints and imgpoints to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera` function. I applied this distortion correction to the test image using the `cv2.undistort` function and obtained this result:
 
-![Camera calibratio undistort result](./results_images/camera_calibration_undistort_result.png)
+![Camera calibratio undistort result](./results_images/camera_calibration_undistort_result.PNG)
 
 The camera calibration and distortion coefficients(mtx, dist) are stored using `pickle`(in folder ./pickled_data/camera_calibration.p) to be used on the main [notebook](Project.%20Advance%20Lane%20Lines.ipynb)
 
@@ -74,7 +74,7 @@ mtx,dist = getCoefficients(objpoints, imgpoints, originalImage)
 ### Pipeline (single images)
 #### 1. Provide an example of a distortion-corrected image.
 To demonstrate this step, I will describe how I apply the distortion correction to one of the test images like this one:
-![Camera calibration](./results_images/camera_calibration_undistort_result.PNG)
+![Camera calibration](./results_images/original-to-undistort.png)
 
 
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
