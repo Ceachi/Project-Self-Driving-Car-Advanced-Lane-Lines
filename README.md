@@ -48,7 +48,7 @@ Using `cv2.findChessboardCorners`, the corners points are stored in an array `im
 
 I then used the output objpoints and imgpoints to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera` function. I applied this distortion correction to the test image using the `cv2.undistort` function and obtained this result:
 
-![Camera calibratio undistort result](./results_images/camera_calibration_undistort_result.PNG)
+![Camera calibratio undistort result](./results_images/camera_calibration_undistort_result.png)
 
 The camera calibration and distortion coefficients(mtx, dist) are stored using `pickle`(in folder ./pickled_data/camera_calibration.p) to be used on the main [notebook](Project.%20Advance%20Lane%20Lines.ipynb)
 
@@ -74,10 +74,15 @@ mtx,dist = getCoefficients(objpoints, imgpoints, originalImage)
 ### Pipeline (single images)
 #### 1. Provide an example of a distortion-corrected image.
 To demonstrate this step, I will describe how I apply the distortion correction to one of the test images like this one:
-![alt text][image2]
+![Camera calibration](./results_images/original-to-undistort.png)
 
 
+#### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
+The code used to experiment with color, gradients, and thresholds could be found on the [Step 2. Color Transform and Gradients Threshold notebook](Step_2_Color_Transform_and_Gradients_Threshold.ipynb).
+
+A color transformation to HLS was done, and the S channel was selected because it shows more contracts on the lane lines. Here are the results for all the testing images:
+![S_channel_result](./results_images/s_channel.png)
 
 ## How to write a README
 A well written README file can enhance your project and portfolio.  Develop your abilities to create professional README files by completing [this free course](https://www.udacity.com/course/writing-readmes--ud777).
