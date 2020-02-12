@@ -119,7 +119,7 @@ Using `cv2.getPerspectiveTransform`, a transformation matrix was calculated, and
 The transformation matrix and the inverse transformation matrix was stored using `pickle` to be used on the main project. The following picture shows the binary images results after the perspective transformation:
 ![Binary images transformed](./results_images/result_perspective.png)
 
-![Detect Lines & Determine Curvature](./results_images/lane_curvature.png)
+![Detect Lines & Determine Curvature](./results_images/lane_curvature.PNG)
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
