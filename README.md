@@ -121,6 +121,8 @@ The transformation matrix and the inverse transformation matrix was stored using
 
 ![Detect Lines & Determine Curvature](./results_images/lane_curvature.PNG)
 
+Radius of Curvature, awsome tutorial here: https://www.intmath.com/applications-differentiation/8-radius-curvature.php
+
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
 The line detection code could be found at `In [9]` of the main project. 
